@@ -71,7 +71,7 @@ app.delete("/posts/:id", (req,res)=>{
     res.redirect("/posts");
 })
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.listen(port, ()=>{
     console.log(`app is listing on ${port}`);
