@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit post</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 60px;
+        }
+        button{
+            display: inline-block;
+            background-color: maroon;
+            color: white;
+            padding: 12px 20px;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2{
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <h2>Edit Your Post</h2>
+    <!-- <p>Post id : <%= post.id%></p> -->
+    <p>Post Username: <%= post.username%></p>
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <textarea rows="15" cols="55" name="content"><%= post.content%></textarea><br/>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

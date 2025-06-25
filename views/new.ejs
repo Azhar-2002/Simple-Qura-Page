@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 60px;
+        }
+        h2{
+            color: maroon;
+        }
+        button{
+            display: inline-block;
+            background-color: maroon;
+            color: white;
+            padding: 12px 20px;
+            margin: 20px auto;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        input[name="username"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            margin: 15px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[name="username"]:focus {
+  border-color: maroon;
+  outline: none;
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.3);
+}
+    </style>
+</head>
+<body>
+    <h2>Create Your Post</h2>
+    <form method="post" action="/posts">
+        <input placeholder="enter username" name="username"/><br/><br/>
+        <textarea rows="15" cols="55" placeholder="Write your Posts" name="content"></textarea><br/> 
+        <button>Submit Post</button>
+    </form>
+</body>
+</html>

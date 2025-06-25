@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show in Details</title>
+    <link rel="stylesheet" href="/style.css"/>
+    <style>
+        h2{
+            color: maroon;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="showHead">Here is your post in detail</h2>
+    <!-- <p>Post id : <%= post.id %></p> -->
+    <div class="post">
+        <h3 class="user">Username : <%= post.username%></h3>
+        <h4 class="content"><%= post.content%></h4>
+    </div>
+</body>
+</html>
